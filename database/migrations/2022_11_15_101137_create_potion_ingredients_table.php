@@ -13,11 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ingredients', function (Blueprint $table) {
+        Schema::create('potion_ingredients', function (Blueprint $table) {
             $table->id();
-            //TODO: ADD PROPERTIES
-            $table->string('name');
-            $table->integer('value');
+            $table->foreignId('ingredient_id')->references('id')->on('ingredients');
+            $table->foreignId('potion_id')->references('id')->on('potions');
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingredients');
+        Schema::dropIfExists('potion_ingredients');
     }
 };
