@@ -20,27 +20,30 @@
                 <div class="ingredients">
                     <h2 class="h2">Ingredients</h2>
                     <div class="ingredient-checkboxes">
-                        <div class="value">
-                            <input type="checkbox" id="basil" name="basil" value="basil">
-                            <label for="basil"> 
-                                <img src= "{{ asset('/img/basil.png')}}">
-                                Basil
-                            </label>
-                        </div>
-                        <div class="value">
-                            <input type="checkbox" id="basil" name="basil" value="basil">
-                            <label for="basil"> 
-                                <img src= "{{ asset('/img/basil.png')}}">
-                                Chives
-                            </label>
-                        </div>
-                        <div class="value">
-                            <input type="checkbox" id="basil" name="basil" value="basil">
-                            <label for="basil"> 
-                                <img src= "{{ asset('/img/basil.png')}}">
-                                <p>Lavender<p>
-                            </label>
-                        </div>
+                        <form action="/check-potion" method="POST">
+                            @csrf
+                            <div class="value">
+                                <input type="checkbox" id="basil" name="basil" value="basil">
+                                <label for="basil"> 
+                                    <img src= "{{ asset('/img/basil.png')}}">
+                                    <p>Basil</p>
+                                </label>
+                            </div>
+                            <div class="value">
+                                <input type="checkbox" id="basil" name="basil" value="basil">
+                                <label for="basil"> 
+                                    <img src= "{{ asset('/img/basil.png')}}">
+                                    <p>Chives</p>
+                                </label>
+                            </div>
+                            <div class="value">
+                                <input type="checkbox" id="basil" name="basil" value="basil">
+                                <label for="basil"> 
+                                    <img src= "{{ asset('/img/basil.png')}}">
+                                    <p>Lavender<p>
+                                </label>
+                            </div>
+                        </form>
                     </div>
                 </div>
                 <div class="result">
