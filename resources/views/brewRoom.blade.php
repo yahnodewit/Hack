@@ -43,7 +43,7 @@
                                     <p>Lavender<p>
                                 </label>
                             </div>
-                            <input type="submit" value="Submit">
+                            <input type="submit" value="Submit" class="submit-button">
                         </form>
                     </div>
                 </div>

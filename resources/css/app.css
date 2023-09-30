@@ -138,6 +138,10 @@ body{
     margin-left: 30px;
 }
 
+.background-wizzard .old-book .book-info .ingredients .ingredient-checkboxes .submit-button{
+    background-color: #0D312F;
+}
+
 .background-wizzard .old-book .book-info .result{
     width: 45%;
     z-index: 7;
